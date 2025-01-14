@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll to Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Add space between sections */
+        section {
+            padding: 100px 20px;
+            border: 1px solid #ddd;
+            margin-top: 50px;
+            background-color: #f4f4f4;
+            min-height: 500px;
+        }
+
+        /* Styling for buttons */
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Buttons to trigger scroll -->
+    <header>
+        <button onclick="scrollToSection('section1')">Go to Section 1</button>
+        <button onclick="scrollToSection('section2')">Go to Section 2</button>
+        <button onclick="scrollToSection('section3')">Go to Section 3</button>
+    </header>
+
+    <!-- Section 1 -->
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the first section. You can scroll here smoothly when you click the button.</p>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the second section. Scroll down to this part of the page with smooth scrolling.</p>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the third section. Click the button to jump here smoothly.</p>
+    </section>
+
+    <script>
+        // Function to smoothly scroll to a specific section
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            section.scrollIntoView({
+                behavior: 'smooth',  // Smooth scrolling effect
+                block: 'start'       // Align the section at the top of the viewport
+            });
+        }
+    </script>
+
+</body>
+</html>

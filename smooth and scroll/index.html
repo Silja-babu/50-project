@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smooth Scroll to Sections</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 2000px; /* Added for scrolling effect */
+        }
+        section {
+            margin-top: 100px;
+            padding: 50px;
+            border: 1px solid #ddd;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <button onclick="scrollToSection('section1')">Section 1</button>
+    <button onclick="scrollToSection('section2')">Section 2</button>
+    <button onclick="scrollToSection('section3')">Section 3</button>
+
+    <section id="section1">
+        <h2>Section 1</h2>
+        <p>This is the first section.</p>
+    </section>
+    <section id="section2">
+        <h2>Section 2</h2>
+        <p>This is the second section.</p>
+    </section>
+    <section id="section3">
+        <h2>Section 3</h2>
+        <p>This is the third section.</p>
+    </section>
+
+    <script>
+        function scrollToSection(sectionId) {
+            document.getElementById(sectionId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
